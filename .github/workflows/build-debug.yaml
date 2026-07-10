@@ -47,6 +47,9 @@ jobs:
 
           echo "FFmpeg binaries placed in jniLibs"
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
 

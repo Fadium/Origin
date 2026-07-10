@@ -91,6 +91,9 @@ jobs:
             echo "No signing secrets configured, skipping"
           fi
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: Build Release APK
         run: ./gradlew --no-daemon --stacktrace assembleRelease
 
