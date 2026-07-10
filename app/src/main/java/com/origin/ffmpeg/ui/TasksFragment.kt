@@ -213,7 +213,7 @@ class TasksFragment : Fragment() {
                     taskStore.removeTask(task.id)
                     tasks.removeAt(adapterPosition)
                     notifyItemRemoved(adapterPosition)
-                    binding.tvEmpty.visibility = if (tasks.isEmpty()) View.VISIBLE else View.GONE
+                    this@TasksFragment.binding.tvEmpty.visibility = if (tasks.isEmpty()) View.VISIBLE else View.GONE
                 }
 
                 // Click to view details

@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.origin.ffmpeg.R
 import com.origin.ffmpeg.databinding.ActivityMainBinding
 import com.origin.ffmpeg.service.FFmpegService
 
