@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF6750A4</color>
+    <color name="primary_container">#FFEADDFF</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="secondary">#FF625B71</color>
+    <color name="secondary_container">#FFE8DEF8</color>
+    <color name="on_secondary">#FFFFFFFF</color>
+    <color name="surface">#FFFEF7FF</color>
+    <color name="on_surface">#FF1D1B20</color>
+    <color name="error">#FFB3261E</color>
+    <color name="on_error">#FFFFFFFF</color>
+    <color name="background">#FFFEF7FF</color>
+
+    <color name="status_pending">#FF9E9E9E</color>
+    <color name="status_running">#FF2196F3</color>
+    <color name="status_completed">#FF4CAF50</color>
+    <color name="status_failed">#FFF44336</color>
+    <color name="status_cancelled">#FFFF9800</color>
+
+    <color name="progress_background">#FFE0E0E0</color>
+    <color name="progress_foreground">#FF6750A4</color>
+</resources>

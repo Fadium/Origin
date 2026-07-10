@@ -1,0 +1,57 @@
+name: Build Debug
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  BuildDebug:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Download FFmpeg binaries
+        run: |
+          mkdir -p app/src/main/jniLibs/arm64-v8a
+          mkdir -p app/src/main/jniLibs/armeabi-v7a
+          mkdir -p app/src/main/jniLibs/x86_64
+
+          # Download pre-built FFmpeg static binaries from BtbN
+          BASE_URL="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest"
+
+          # arm64
+          wget -q "${BASE_URL}/ffmpeg-master-latest-linuxarm64-gpl-shared.tar.xz" -O /tmp/ffmpeg-arm64.tar.xz
+          tar -xf /tmp/ffmpeg-arm64.tar.xz -C /tmp/
+          cp /tmp/ffmpeg-master-latest-linuxarm64-gpl-shared/bin/ffmpeg app/src/main/jniLibs/arm64-v8a/ffmpeg.so
+          cp /tmp/ffmpeg-master-latest-linuxarm64-gpl-shared/bin/ffprobe app/src/main/jniLibs/arm64-v8a/ffprobe.so
+
+          # Note: For actual Android builds, you need cross-compiled FFmpeg for Android.
+          # See README.md for instructions on building FFmpeg for Android.
+
+          echo "FFmpeg binaries placed in jniLibs"
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: origin-debug
+          path: app/build/outputs/apk/debug/*.apk

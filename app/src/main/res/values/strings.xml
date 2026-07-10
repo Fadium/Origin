@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Origin</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_tasks">任务</string>
+    <string name="tab_settings">设置</string>
+
+    <string name="btn_select_file">选择文件</string>
+    <string name="btn_start_convert">开始转换</string>
+    <string name="btn_stop">停止</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_resume">继续</string>
+
+    <string name="label_input_file">输入文件</string>
+    <string name="label_output_format">输出格式</string>
+    <string name="label_output_path">输出路径</string>
+    <string name="label_quality">质量</string>
+    <string name="label_resolution">分辨率</string>
+    <string name="label_audio_codec">音频编码</string>
+    <string name="label_video_codec">视频编码</string>
+    <string name="label_bitrate">码率</string>
+    <string name="label_custom_args">自定义参数</string>
+
+    <string name="format_mp4">MP4</string>
+    <string name="format_mkv">MKV</string>
+    <string name="format_avi">AVI</string>
+    <string name="format_webm">WebM</string>
+    <string name="format_mov">MOV</string>
+    <string name="format_mp3">MP3</string>
+    <string name="format_aac">AAC</string>
+    <string name="format_flac">FLAC</string>
+    <string name="format_wav">WAV</string>
+    <string name="format_ogg">OGG</string>
+    <string name="format_gif">GIF</string>
+    <string name="format_png_seq">PNG序列</string>
+
+    <string name="quality_low">低</string>
+    <string name="quality_medium">中</string>
+    <string name="quality_high">高</string>
+    <string name="quality_original">原始</string>
+
+    <string name="status_pending">等待中</string>
+    <string name="status_running">处理中</string>
+    <string name="status_completed">已完成</string>
+    <string name="status_failed">失败</string>
+    <string name="status_cancelled">已取消</string>
+
+    <string name="msg_no_file_selected">请先选择输入文件</string>
+    <string name="msg_task_started">任务已开始</string>
+    <string name="msg_task_completed">任务已完成</string>
+    <string name="msg_task_failed">任务失败</string>
+    <string name="msg_permission_required">需要存储权限才能使用此功能</string>
+    <string name="msg_ffmpeg_not_found">FFmpeg未找到，请在设置中配置</string>
+    <string name="msg_output_saved">输出文件已保存到: %s</string>
+
+    <string name="notification_channel_name">FFmpeg处理</string>
+    <string name="notification_processing">正在处理媒体文件…</string>
+
+    <string name="settings_ffmpeg_path">FFmpeg路径</string>
+    <string name="settings_output_dir">默认输出目录</string>
+    <string name="settings_theme">主题</string>
+    <string name="settings_language">语言</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_version">版本 %s</string>
+    <string name="settings_ffmpeg_version">FFmpeg版本</string>
+    <string name="settings_check_ffmpeg">检测FFmpeg</string>
+    <string name="settings_ffmpeg_ok">FFmpeg 可用</string>
+    <string name="settings_ffmpeg_fail">FFmpeg 不可用</string>
+
+    <string name="dialog_confirm_title">确认</string>
+    <string name="dialog_confirm_delete">确定要删除此任务吗？</string>
+    <string name="dialog_confirm_cancel">确定要取消此任务吗？</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+</resources>
